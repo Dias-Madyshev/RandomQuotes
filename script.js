@@ -1,19 +1,35 @@
 const quotes = [
-	'If you fall asleep now, you will dream. If you study now, you will live your dream',
-	'When you think it’s too late, the truth is, it’s still early ',
-	'The pain of studying is only temporary. But the pain of not knowing — ignorance — is forever',
-	'Studying is not about time. It’s about effort',
-	'Life is not all about studying. But if you can’t even conquer this little part of life, then what else can you possibly do?',
+	{ quote: 'The best dreams happen when you’re awake', author: 'Cherie Gilderbloom' },
+	{ quote: 'Success is not the key to happiness. Happiness is the key to success', author: 'Herman Cain' },
+	{ quote: 'To have another language is to possess a second soul', author: 'Charlemagne' },
+	{ quote: 'Happiness is not something ready-made. It comes from your own actions', author: 'Dalai Lama' },
+	{
+		quote: 'In the end, we will remember not the words of our enemies, but the silence of our friends',
+		author: 'Martin Luther King Jr.',
+	},
+	{
+		quote: 'Do not go where the path may lead, go instead where there is no path and leave a trail',
+		author: 'Ralph Waldo Emerson',
+	},
+	{ quote: 'You must be the change you wish to see in the world', author: 'Mahatma Gandhi' },
+	{ quote: 'Success usually comes to those who are too busy to be looking for it', author: 'Henry David Thoreau' },
+	{ quote: 'Life is what happens when you’re busy making other plans', author: 'John Lennon' },
+	{ quote: 'It is never too late to be what you might have been', author: 'George Eliot' },
 ]
+
 const GetQuote = document.getElementById('GetQuote')
 const ButtonQuote = document.getElementById('ButtonQuote')
+const AuthorQuote = document.getElementById('author')
 
 const GetQuoteClickButton = () => {
 	const randomQuotesCount = Math.floor(Math.random() * quotes.length)
 	const randomQuote = quotes[randomQuotesCount]
 
-	GetQuote.textContent = randomQuote
-}
-ButtonQuote.addEventListener('click', GetQuoteClickButton)
+	const { author, quote } = randomQuote
+	// Правильное создание строки с цитатой
 
-GetQuoteClickButton()
+	AuthorQuote.innerHTML = author
+	GetQuote.innerHTML = quote
+}
+
+ButtonQuote.addEventListener('click', GetQuoteClickButton)
