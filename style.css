@@ -1,0 +1,35 @@
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100vh;
+	background-color: #f4f4f4;
+	padding-top: 20px;
+	background: url('./src/wmremove-transformed.jpeg') no-repeat center center fixed;
+	background-size: cover;
+	padding-top: 20px;
+}
+.container {
+	text-align: center;
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.quote {
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+.button {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 1em;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.button:hover {
+	background-color: #0056b3;
+}
